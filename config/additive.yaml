@@ -1,0 +1,31 @@
+# Auction Setting
+n_items: 12   # Number of items
+
+# Menu Setting
+J: 5000  # Menu size
+menu_support_size: 16  # Support size of the initial distribution
+
+# Flow Setting
+n_flow_samples: 10000  # Number of samples for training the flow network
+flow_train_bs: 2048  # Flow training batch size
+flow_train_iterations: 30000  # Number of flow training iterations
+flow_nn_hidden: 128  # Number of hidden units in flow
+flow_init_dist_start: 0.5  # Initial distribution is a mixture of Dirac,
+flow_init_dist_range: 0.1  # with locations in the range [flow_init_dist_start, flow_init_dist_start + flow_init_dist_range]
+
+# Menu Training
+menu_train_bs: 128  # Menu training batch size
+menu_train_iterations: 10000000  # Number of menu training iterations
+menu_print_iterations: 200  # Interval between training loss prints
+menu_softmax_update_iterations: 400  # Interval between training loss prints
+menu_eval_iterations: 1000  # Number of menu evaluation iterations
+train_ratio: 0.95  # Proportion of training samples
+menu_lr: 0.3  # Learning rate of menu training
+init_softmax: 0.1  # Initial value of softmax (for revenue)
+max_softmax: 1000  # Initial value of softmax (for revenue)
+min_softmax: 0.1  # Initial value of softmax (for revenue)
+factor_softmax: 1.05  # Initial value of softmax (for revenue)
+small_factor_softmax: 1.01  # Initial value of softmax (for revenue)
+test_bs: 10000  # Batch size of testing
+n_test_batches: 50  # Number of test batches
+value_file: "/content/drive/MyDrive/tensor1.pt"  # File where bids are saved
